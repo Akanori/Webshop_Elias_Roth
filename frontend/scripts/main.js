@@ -7,19 +7,25 @@ async function loadoffers() {
 
     for (const product of products.products) {
         const card = document.createElement("div");
-        console.log(product.id);
         card.id = product.id;
         card.classList.add('column')
         card.innerHTML = `
         <div class="card">
-            <img src="assets/${product.imageName}" alt="${product.productName}" style="width:100%">
-            <p>${product.normalPrice} Fr.</p>
-            <p>${product.specialOffer} Fr.</p>
+            <img src="assets/${product.imageName}" alt="${product.productName}" 
+                style="width:100%"  onclick = "todetailpage('${product.id}')">
+            <p id = "normalprice">${product.normalPrice} Fr.</p>
+            <p id= "specialprice">${product.specialOffer} Fr.</p>
+            <button onclick = "">Zum Warenkorb</button>
         </div>`;
 
         row.appendChild(card);
     }
+}
 
+async function todetailpage(productid) {
+    await fetch(`/session/${productid}`, { method: "PUT" });
+
+    location.href = "./productdetails.html";
 }
 
 

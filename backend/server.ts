@@ -1,8 +1,15 @@
 import { Application, send, Router } from "https://deno.land/x/oak/mod.ts";
+import { Session } from "https://deno.land/x/session@1.1.0/mod.ts";
 import { products } from "./products.ts";
 
 
 const app = new Application();
+
+const session = new Session({ framework: "oak" });
+await session.init();
+
+app.use(session.use()(session));
+
 const router = new Router();
 
 router
@@ -11,13 +18,19 @@ router
 
     context.response.status = 200;
   })
-  .get("/api/product/:id", async context => {
+  .get("/api/product", async context => {
     let product = products;
-    product = product.filter(x => x.id == context.params.id);
+    let id = await context.state.session.get("currProd");
+    product = product.filter(x => x.id == id);
 
     context.response.body = {
       product,
     }
+
+    context.response.status = 200;
+  })
+  .put("/session/:id", async context => {
+    await context.state.session.set("currProd", context.params.id);
 
     context.response.status = 200;
   });

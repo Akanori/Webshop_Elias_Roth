@@ -9,6 +9,10 @@ body {
     background-color: rgb(219, 219, 219);
 }
 
+h1 {
+    font-size: 5vw;
+}
+
 .content {
     margin-top: 5vh;
     flex: 1 0 auto;
@@ -17,6 +21,9 @@ body {
 footer {
     flex-shrink: 0;
 }
+
+
+/*Header template Style*/
 
 header {
     text-align: center;
@@ -53,18 +60,28 @@ header button {
     margin-top: 5vh;
     margin-right: 1vh;
     border-radius: 8px;
-    font-family: 'Courier New', Courier, monospace;
     font-size: xx-large;
 }
 
+
+/*Card Styles*/
+
 * {
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .column {
     margin-top: 5vh;
     float: left;
     width: 25%;
+    padding: 0 10px;
+}
+
+.columndetail {
+    margin-top: 5vh;
+    float: left;
+    width: 50%;
     padding: 0 10px;
 }
 
@@ -92,6 +109,20 @@ header button {
     text-align: center;
     background-color: #f1f1f1;
 }
+
+#normalprice {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+}
+
+#specialprice {
+    color: green;
+    font-weight: bold;
+}
+
+
+/*Footer Template Style*/
 
 footer {
     height: 10vh;

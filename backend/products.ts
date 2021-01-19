@@ -34,12 +34,12 @@ export let products: ProductInterface[] = [
         description: "Schweizer Halbhartkäse und  vollfett. aus Rohmilch"
     },
     {
-        "id": "005",
-        "productName": "Eier",
-        "specialOffer": 4.5,
-        "normalPrice": 5.4,
-        "imageName": "eier.jpg",
-        "description": "9 Schweizer Eier aus Frilandhaltung"
+        id: "005",
+        productName: "Eier",
+        specialOffer: 4.5,
+        normalPrice: 5.4,
+        imageName: "eier.jpg",
+        description: "9 Schweizer Eier aus Frilandhaltung"
     },
     {
         id: "006",
@@ -58,12 +58,12 @@ export let products: ProductInterface[] = [
         description: "Vanilleglace und Milchschokolade mit Mandeln"
     },
     {
-        "id": "008",
-        "productName": "Iced Green Tea",
-        "specialOffer": 7.5,
-        "normalPrice": 10.8,
-        "imageName": "icedtea.jpg",
-        "description": "AriZona Green Tea - Grünteegrtränk"
+        id: "008",
+        productName: "Iced Green Tea",
+        specialOffer: 7.5,
+        normalPrice: 10.8,
+        imageName: "icedtea.jpg",
+        description: "AriZona Green Tea - Grünteegrtränk"
     },
     {
         id: "009",
