@@ -15,7 +15,7 @@ async function loadoffers() {
                 style="width:100%"  onclick = "todetailpage('${product.id}')">
             <p id = "normalprice">${product.normalPrice} Fr.</p>
             <p id= "specialprice">${product.specialOffer} Fr.</p>
-            <button onclick = "">Zum Warenkorb</button>
+            <button onclick = "addtocart(${product.id}, 1)">Zum Warenkorb</button>
         </div>`;
 
         row.appendChild(card);

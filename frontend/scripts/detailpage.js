@@ -12,7 +12,7 @@ async function loadpage() {
         card.innerHTML = `
         <div class="card">
             <img src="assets/${productdetails.imageName}" alt="${productdetails.productName}" 
-                style="width:100%"  onclick = "todetailpage('${productdetails.id}')">
+                style="width:100%">
             <p id = "normalprice">${productdetails.normalPrice} Fr.</p>
             <p id= "specialprice">${productdetails.specialOffer} Fr.</p>
         </div>`;
@@ -27,7 +27,7 @@ async function loadpage() {
         <div class="card">
             <h1>${productdetails.productName}</h1>
             <p>${productdetails.description}</p>
-            <button onclick = "">Zum Warenkorb</button>
+            <button onclick = "addtocart(${productdetails.id}, 1)">Zum Warenkorb</button>
         </div>`;
 
         row.appendChild(card);
