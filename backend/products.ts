@@ -1,6 +1,6 @@
 import { ProductInterface } from "./productInterface.ts"
  
-export let products = [
+export let products: ProductInterface[] = [
     {
         id: "001",
         productName: "Nektarinen gelb",

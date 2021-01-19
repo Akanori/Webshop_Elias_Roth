@@ -1,0 +1,103 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(219, 219, 219);
+}
+
+.content {
+    margin-top: 5vh;
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+header {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header p {
+    display: inline;
+    font-size: 5vw;
+}
+
+header #t1 {
+    width: 50%;
+    float: left;
+    background-color: green;
+    color: white;
+}
+
+header #t2 {
+    background-color: rgb(245, 228, 0);
+    color: white;
+}
+
+header section {
+    width: 100%;
+    margin: auto;
+}
+
+header button {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    background: green;
+    margin-top: 5vh;
+    margin-right: 1vh;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    margin-top: 5vh;
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+footer {
+    height: 10vh;
+    background-image: linear-gradient(0deg, rgb(245, 228, 0), rgb(219, 219, 219) 100%)
+}
+
+footer p {
+    text-align: center;
+}
