@@ -1,5 +1,5 @@
 async function addtocart(id, action) {
-    await fetch(`/cart/${id}/1`, { method: "PUT" });
+    await fetch(`/cart/${id}`, { method: "PUT" });
 
     updateminicart();
 }
@@ -8,11 +8,11 @@ async function updateminicart() {
     const response = await fetch("/cart");
     const cart = await response.json();
 
-    let length = cart.length;
+    let length = await cart.length;
     let total = 0;
 
     for (let x = 0; x < length; x++) {
-        total += cart[x].specialOffer;
+        total += await cart[x].specialOffer;
     }
 
     const button = document.querySelector('#btn-cart');

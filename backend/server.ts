@@ -36,17 +36,16 @@ router
 
     context.response.status = 200;
   })
-  .put("/cart/:id/:action", async context => {
-      let product = products;
-      product = product.filter(x => x.id == context.params.id);
-  
-      cart.push(product);
+  .put("/cart/:id", context => {
+    console.log(context.params.id);
+
+      cart.push(products[Number(context.params.id) - 1]);
 
     context.response.status = 200;
   })
   .get("/cart", async context => {
     
-    //ab hier stuck
+    context.response.body = cart;
 
     context.response.status = 200;
   });
